@@ -1,0 +1,10 @@
+-- lua/plugins/fzf.lua
+return {
+  "ibhagwan/fzf-lua",
+  opts = function(_, opts)
+    opts.files = {
+      cmd = "fd --type f --hidden --exclude .git --exclude node_modules",
+    }
+    return opts
+  end,
+}

@@ -1,0 +1,81 @@
+[
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+      "space m": "editor::ToggleCodeActions",
+      "space c f": "editor::Format",
+      "space c r": "editor::Rename",
+      "space e e": "editor::GoToDiagnostic",
+
+      "space .": "file_finder::Toggle",
+      "space ,": "tab_switcher::Toggle",
+
+      "space p a": "workspace::ToggleRightDock",
+
+      "space v": "editor::GoToDefinitionSplit",
+      "space o": "outline::Toggle",
+      "space s": "project_symbols::Toggle",
+
+      "g r": "editor::FindAllReferences",
+      "g c c": "editor::ToggleComments",
+
+      "space q": "pane::CloseActiveItem",
+      "space shift-q": "pane::CloseOtherItems",
+
+      // Code navigation
+      "shift-l": "vim::EndOfLine",
+      "shift-h": "vim::FirstNonWhitespace",
+      // "shift-j": "vim::EndOfParagraph",
+      // "shift-k": "vim::StartOfParagraph",
+      "g d": "editor::GoToDefinition",
+
+      "v v": "vim::ToggleVisualBlock",
+
+      "space t": "workspace::NewTerminal",
+      "g s": "editor::FindAllReferences",
+
+      // git
+      "g b": "git::Blame"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      // "down": ["workspace::SendKeystrokes", "4 j"]
+      // "up": ["workspace::SendKeystrokes", "4 k"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+      "shift-k": "editor::MoveLineUp",
+      "shift-j": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in insert mode
+      // e.g.
+      "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
+    }
+  },
+
+  {
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrevious",
+      "ctrl-y": "editor::SelectLine"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-j": "editor::ContextMenuNext",
+      "ctrl-k": "editor::ContextMenuPrevious"
+    }
+  }
+]
