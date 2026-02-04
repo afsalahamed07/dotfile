@@ -1,16 +1,17 @@
 return {
   {
     "rose-pine/neovim",
-    as = "rose-pine",
+    name = "rose-pine",
     config = function()
       require("rose-pine").setup({
         styles = {
           transparency = true,
           bold = true,
-          italic = false, -- disable global italics
+          italic = false,
         },
+
         highlight_groups = {
-          Comment = { italic = true }, -- only comments italic
+          Comment = { italic = true },
           Keyword = { italic = false },
           Type = { italic = false },
           Function = { italic = false },
@@ -19,10 +20,9 @@ return {
       })
     end,
   },
+
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "rose-pine",
-    },
+    opts = { colorscheme = "rose-pine" },
   },
 }

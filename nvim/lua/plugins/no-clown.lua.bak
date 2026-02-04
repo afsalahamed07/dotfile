@@ -1,0 +1,36 @@
+return {
+  {
+    "aktersnurra/no-clown-fiesta.nvim",
+    lazy = false, -- load on startup
+    priority = 1000, -- load before other UI plugins
+    config = function()
+      require("no-clown-fiesta").setup({
+        theme = "dark", -- dark | dim | light
+        -- transparent = false, -- false = background enabled
+        -- styles = {
+        type = { bold = true },
+        lsp = { underline = false },
+        match_paren = { underline = true },
+        --   comments = {},
+        --   functions = {},
+        --   keywords = {},
+        --   lsp = {},
+        --   match_paren = {},
+        --   type = {},
+        --   variables = {},
+        -- },
+      })
+
+      -- vim.o.background = "dark"
+      -- vim.cmd.colorscheme("no-clown-fiesta")
+    end,
+  },
+
+  -- Only include this block if you're using LazyVim
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "no-clown-fiesta",
+    },
+  },
+}
