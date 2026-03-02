@@ -2,7 +2,7 @@ return {
   "nvim-lualine/lualine.nvim",
   opts = {
     options = {
-      theme = "rose-pine",
+      theme = "hubbamax",
       component_separators = { left = "|", right = "|" },
       section_separators = { left = "", right = "" },
     },
