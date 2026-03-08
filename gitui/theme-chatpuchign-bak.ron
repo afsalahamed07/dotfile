@@ -1,0 +1,24 @@
+(
+    selected_tab: Some("#89b4fa"),      // Catppuccin Blue
+    command_fg: Some("#cdd6f4"),        // Catppuccin Text
+    selection_bg: Some("#74c7ec"),      // Catppuccin Sapphire
+    selection_fg: Some("#1e1e2e"),      // Catppuccin Base
+    cmdbar_bg: Some("#181825"),         // Catppuccin Mantle
+    cmdbar_extra_lines_bg: Some("#313244"), // Catppuccin Surface0
+    disabled_fg: Some("#6c7086"),       // Catppuccin Overlay0
+    diff_line_add: Some("#a6e3a1"),     // Catppuccin Green
+    diff_line_delete: Some("#f38ba8"),  // Catppuccin Red
+    diff_file_added: Some("#a6e3a1"),   // Catppuccin Green
+    diff_file_removed: Some("#f38ba8"), // Catppuccin Red
+    diff_file_moved: Some("#cba6f7"),   // Catppuccin Mauve
+    diff_file_modified: Some("#f9e2af"), // Catppuccin Yellow
+    commit_hash: Some("#89b4fa"),       // Catppuccin Blue
+    commit_time: Some("#a6e3a1"),       // Catppuccin Green
+    commit_author: Some("#cba6f7"),     // Catppuccin Mauve
+    danger_fg: Some("#f38ba8"),         // Catppuccin Red
+    push_gauge_bg: Some("#181825"),     // Catppuccin Mantle
+    push_gauge_fg: Some("#cdd6f4"),     // Catppuccin Text
+    tag_fg: Some("#cba6f7"),            // Catppuccin Mauve
+    branch_fg: Some("#f9e2af"),         // Catppuccin Yellow
+    block_title_focused: Some("#cdd6f4"), // Catppuccin Text
+)

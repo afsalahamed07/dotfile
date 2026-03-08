@@ -16,8 +16,6 @@ yabai-bak
 QtProject
 envman
 fontforge
-ghostty
-gitui
 nvim.bak
 nvim2.bak
 rstudio
@@ -30,7 +28,4 @@ zed/embeddings
 zed/prompts
 zed/keymap_backup.json
 zed/settings_backup.json
-tmux/plugins/tmux-resurrect
-tmux/plugins/tmux-sensible/
-tmux/plugins/tmux-session/
-tmux/plugins/tpm/
+tmux/plugins

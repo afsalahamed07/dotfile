@@ -1,0 +1,33 @@
+(
+    // Core UI
+    selected_tab: Some("#458588"),          // gruvbox blue (normal)
+    command_fg: Some("#ebdbb2"),            // fg1
+    selection_bg: Some("#504945"),          // bg2 (common Visual selection)
+    selection_fg: Some("#ebdbb2"),          // fg1
+    cmdbar_bg: Some("#282828"),             // bg0
+    cmdbar_extra_lines_bg: Some("#3c3836"), // bg1
+    disabled_fg: Some("#928374"),           // gray
+
+    // Diff colors (gruvbox standard)
+    diff_line_add: Some("#98971a"),         // green (normal)
+    diff_line_delete: Some("#cc241d"),      // red (normal)
+    diff_file_added: Some("#b8bb26"),       // green (bright)
+    diff_file_removed: Some("#fb4934"),     // red (bright)
+    diff_file_moved: Some("#b16286"),       // purple (normal)
+    diff_file_modified: Some("#d79921"),    // yellow (normal)
+
+    // Git metadata
+    commit_hash: Some("#83a598"),           // blue (bright)
+    commit_time: Some("#b8bb26"),           // green (bright)
+    commit_author: Some("#d3869b"),         // purple (bright)
+
+    // Alerts / gauges
+    danger_fg: Some("#fb4934"),             // red (bright)
+    push_gauge_bg: Some("#3c3836"),         // bg1
+    push_gauge_fg: Some("#ebdbb2"),         // fg1
+
+    // Labels
+    tag_fg: Some("#d3869b"),                // purple (bright)
+    branch_fg: Some("#fe8019"),             // orange (bright)
+    block_title_focused: Some("#fbf1c7"),   // fg0 (strong highlight)
+)

@@ -1,0 +1,24 @@
+(
+    selected_tab: Some("#9ccfd8"), // teal
+    command_fg: Some("#f2e9de"), // ivory
+    selection_bg: Some("#3e8fb0"), // muted blue
+    selection_fg: Some("#faf4ed"), // white
+    cmdbar_bg: Some("#191724"), // base
+    cmdbar_extra_lines_bg: Some("#1f1d2e"), // surface
+    disabled_fg: Some("#6e6a86"), // muted gray
+    diff_line_add: Some("#9ccfd8"), // teal
+    diff_line_delete: Some("#eb6f92"), // pink
+    diff_file_added: Some("#9ccfd8"), // teal
+    diff_file_removed: Some("#eb6f92"), // pink
+    diff_file_moved: Some("#c4a7e7"), // purple
+    diff_file_modified: Some("#f6c177"), // gold
+    commit_hash: Some("#3e8fb0"), // muted blue
+    commit_time: Some("#9ccfd8"), // teal
+    commit_author: Some("#c4a7e7"), // purple
+    danger_fg: Some("#eb6f92"), // pink
+    push_gauge_bg: Some("#191724"), // base
+    push_gauge_fg: Some("#f2e9de"), // ivory
+    tag_fg: Some("#c4a7e7"), // purple
+    branch_fg: Some("#f6c177"), // gold
+    block_title_focused: Some("#faf4ed"), // white
+)
