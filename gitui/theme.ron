@@ -1,33 +1,28 @@
 (
-    // Core UI
-    selected_tab: Some("#61afef"),          // onedark blue :contentReference[oaicite:2]{index=2}
-    command_fg: Some("#abb2bf"),            // onedark fg :contentReference[oaicite:3]{index=3}
-    selection_bg: Some("#4b5263"),          // gutter grey (nice selection-ish bg) :contentReference[oaicite:4]{index=4}
-    selection_fg: Some("#abb2bf"),          // fg :contentReference[oaicite:5]{index=5}
-    cmdbar_bg: Some("#1f2329"),             // bg0 (darker) :contentReference[oaicite:6]{index=6}
-    cmdbar_extra_lines_bg: Some("#282c34"), // bg1 :contentReference[oaicite:7]{index=7}
-    disabled_fg: Some("#5c6370"),           // comment grey :contentReference[oaicite:8]{index=8}
+    selected_tab: Some("#87afaf"),
+    command_fg: Some("#bcbcbc"),
+    selection_bg: Some("#303030"),
+    selection_fg: Some("#bcbcbc"),
+    cmdbar_bg: Some("#1c1c1c"),
+    cmdbar_extra_lines_bg: Some("#262626"),
+    disabled_fg: Some("#767676"),
 
-    // Diff colors (One Dark style)
-    diff_line_add: Some("#98c379"),         // green :contentReference[oaicite:9]{index=9}
-    diff_line_delete: Some("#e06c75"),      // red :contentReference[oaicite:10]{index=10}
-    diff_file_added: Some("#98c379"),       // green :contentReference[oaicite:11]{index=11}
-    diff_file_removed: Some("#e06c75"),     // red :contentReference[oaicite:12]{index=12}
-    diff_file_moved: Some("#c678dd"),       // magenta/purple :contentReference[oaicite:13]{index=13}
-    diff_file_modified: Some("#d19a66"),    // orange :contentReference[oaicite:14]{index=14}
+    diff_line_add: Some("#87d787"),
+    diff_line_delete: Some("#d75f87"),
+    diff_file_added: Some("#87d787"),
+    diff_file_removed: Some("#d75f87"),
+    diff_file_moved: Some("#d787d7"),
+    diff_file_modified: Some("#d7af87"),
 
-    // Git metadata
-    commit_hash: Some("#61afef"),           // blue :contentReference[oaicite:15]{index=15}
-    commit_time: Some("#98c379"),           // green :contentReference[oaicite:16]{index=16}
-    commit_author: Some("#c678dd"),         // magenta/purple :contentReference[oaicite:17]{index=17}
+    commit_hash: Some("#5fafd7"),
+    commit_time: Some("#87d787"),
+    commit_author: Some("#d787d7"),
 
-    // Alerts / gauges
-    danger_fg: Some("#e06c75"),             // red :contentReference[oaicite:18]{index=18}
-    push_gauge_bg: Some("#282c34"),         // bg1 :contentReference[oaicite:19]{index=19}
-    push_gauge_fg: Some("#abb2bf"),         // fg :contentReference[oaicite:20]{index=20}
+    danger_fg: Some("#af5f5f"),
+    push_gauge_bg: Some("#262626"),
+    push_gauge_fg: Some("#bcbcbc"),
 
-    // Labels
-    tag_fg: Some("#c678dd"),                // purple :contentReference[oaicite:21]{index=21}
-    branch_fg: Some("#d19a66"),             // orange :contentReference[oaicite:22]{index=22}
-    block_title_focused: Some("#ffffff"),   // bright white :contentReference[oaicite:23]{index=23}
+    tag_fg: Some("#d787d7"),
+    branch_fg: Some("#d7af87"),
+    block_title_focused: Some("#bcbcbc"),
 )
