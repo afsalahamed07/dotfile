@@ -28,4 +28,7 @@ zed/embeddings
 zed/prompts
 zed/keymap_backup.json
 zed/settings_backup.json
-tmux/plugins
+tmux/plugins/*
+!tmux/plugins/tmux-session/
+!tmux/plugins/tmux-session/**
+tmux/plugins/tmux-session/.git/
