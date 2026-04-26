@@ -29,3 +29,4 @@ zed/prompts
 zed/keymap_backup.json
 zed/settings_backup.json
 tmux/plugins
+nvim-backup-*
