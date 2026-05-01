@@ -1,13 +1,14 @@
-# Text config
+# ----------- FONT -----------
 font-family = "Maple Mono NF"
+# font-family = "space mono"
 font-thicken = true
-
 font-size = 20
+adjust-cell-height = 12
+
+# -------- UI -------------
 # theme = GruvboxDark
 # theme = Rose Pine
 theme =  hubbamax.ghostty
-adjust-cell-height = 4
-
 # cursor config
 shell-integration-features = no-cursor
 cursor-color = #bcbcbc
@@ -15,7 +16,7 @@ cursor-style = block
 cursor-style-blink = true
 
 # transparency
-# background-opacity = 0.98
+background-opacity = 0.98
 
 
 window-decoration = false
