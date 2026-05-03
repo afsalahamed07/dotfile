@@ -102,10 +102,6 @@ alias diary='nvim ~/Documents/diary.md'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export DATABASE_PASSWORD="Afsal321123," # postgress passowrod for role afsalahamed
-. "/Users/afsalahamed/.deno/env"
-
-
 export NVM_DIR="$HOME/.nvm"
 load-nvm() {
   unset -f nvm node npm npx corepack load-nvm
