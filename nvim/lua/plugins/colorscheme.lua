@@ -1,11 +1,14 @@
 local function apply_hubbamax_highlights()
     local variable = { fg = "#bcbcbc" }
+
     vim.api.nvim_set_hl(0, "@variable", variable)
     vim.api.nvim_set_hl(0, "@variable.go", variable)
     vim.api.nvim_set_hl(0, "@punctuation.bracket.go", variable)
     vim.api.nvim_set_hl(0, "@lsp.type.variable", variable)
     vim.api.nvim_set_hl(0, "@lsp.type.variable.go", variable)
     vim.api.nvim_set_hl(0, "@lsp.type.punctuation.bracket.go", variable)
+
+    vim.api.nvim_set_hl(0, "@punctuation.bracket.python", variable)
 end
 
 return {

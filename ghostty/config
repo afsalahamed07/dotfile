@@ -3,7 +3,7 @@ font-family = "Maple Mono NF"
 # font-family = "space mono"
 font-thicken = true
 font-size = 20
-adjust-cell-height = 12
+adjust-cell-height = 14
 
 # -------- UI -------------
 # theme = GruvboxDark
