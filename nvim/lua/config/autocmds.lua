@@ -1,8 +1,8 @@
 local function set_cursor_mode_highlights()
-  vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#1e1e2e", bg = "#ea9d34" })
-  vim.api.nvim_set_hl(0, "CursorVisual", { fg = "#1e1e2e", bg = "#c4a7e7" })
-  vim.api.nvim_set_hl(0, "CursorInsert", { fg = "#1e1e2e", bg = "#3e8fb0" })
-  vim.api.nvim_set_hl(0, "CursorReplace", { fg = "#1e1e2e", bg = "#eb6f92" })
+  vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#1c1c1c", bg = "#dadada" })
+  vim.api.nvim_set_hl(0, "CursorVisual", { fg = "#1c1c1c", bg = "#87afaf" })
+  vim.api.nvim_set_hl(0, "CursorInsert", { fg = "#1c1c1c", bg = "#5fafd7" })
+  vim.api.nvim_set_hl(0, "CursorReplace", { fg = "#1c1c1c", bg = "#d75f87" })
 end
 
 vim.api.nvim_create_autocmd("ColorScheme", {

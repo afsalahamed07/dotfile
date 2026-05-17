@@ -3,7 +3,7 @@ config-version = 2
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget open -ga "Ghostty"',
+  'exec-and-forget open -ga "kitty"',
   'exec-and-forget open -ga "Brave Browser"',
   'workspace 1',
 ]
@@ -99,7 +99,7 @@ alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-f = 'fullscreen'
-alt-enter = 'exec-and-forget open -na "Ghostty"'
+alt-enter = 'exec-and-forget open -na "Kitty"'
 alt-b = 'exec-and-forget open -na "Brave Browser"'
 alt-s = 'exec-and-forget open -na "Slack"'
 alt-m = 'exec-and-forget open -na "Music"'

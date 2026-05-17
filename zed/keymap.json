@@ -36,8 +36,8 @@
       "g s": "editor::FindAllReferences",
 
       // git
-      "g b": "git::Blame"
-    }
+      "g b": "git::Blame",
+    },
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -45,37 +45,37 @@
       // put key-bindings here if you want them to work only in normal mode
       // "down": ["workspace::SendKeystrokes", "4 j"]
       // "up": ["workspace::SendKeystrokes", "4 k"]
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
       "shift-k": "editor::MoveLineUp",
-      "shift-j": "editor::MoveLineDown"
-    }
+      "shift-j": "editor::MoveLineDown",
+    },
   },
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in insert mode
       // e.g.
-      "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
-    }
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape.
+    },
   },
 
   {
     "bindings": {
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
-      "ctrl-y": "editor::SelectLine"
-    }
+      "ctrl-y": "editor::SelectLine",
+    },
   },
   {
     "context": "Editor",
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext",
-      "ctrl-k": "editor::ContextMenuPrevious"
-    }
-  }
+      "ctrl-k": "editor::ContextMenuPrevious",
+    },
+  },
 ]

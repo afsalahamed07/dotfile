@@ -1,4 +1,10 @@
 local function apply_hubbamax_highlights()
+    vim.api.nvim_set_hl(0, "Cursor", { fg = "#1c1c1c", bg = "#dadada" })
+    vim.api.nvim_set_hl(0, "CursorNormal", { fg = "#1c1c1c", bg = "#dadada" })
+    vim.api.nvim_set_hl(0, "CursorVisual", { fg = "#1c1c1c", bg = "#87afaf" })
+    vim.api.nvim_set_hl(0, "CursorInsert", { fg = "#1c1c1c", bg = "#5fafd7" })
+    vim.api.nvim_set_hl(0, "CursorReplace", { fg = "#1c1c1c", bg = "#d75f87" })
+
     local variable = { fg = "#bcbcbc" }
 
     vim.api.nvim_set_hl(0, "@variable", variable)
@@ -27,6 +33,10 @@ return {
                 pattern = "hubbamax",
                 callback = apply_hubbamax_highlights,
             })
+
+            if vim.g.colors_name == "hubbamax" then
+                apply_hubbamax_highlights()
+            end
         end,
     },
 }
