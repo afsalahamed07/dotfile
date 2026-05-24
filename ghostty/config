@@ -8,10 +8,9 @@ adjust-cell-height = 14
 # -------- UI -------------
 # theme = GruvboxDark
 # theme = Rose Pine
-theme =  hubbamax.ghostty
+theme = hubbamax.ghostty
 # cursor config
 shell-integration-features = no-cursor
-cursor-color = #bcbcbc
 cursor-style = block
 cursor-style-blink = true
 

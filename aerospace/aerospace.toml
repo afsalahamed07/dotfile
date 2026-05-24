@@ -45,7 +45,7 @@ outer.right = 8
 
 [mode.main.binding]
 # Focus monitor
-alt-i = 'focus-monitor --wrap-around prev'
+# alt-i = 'focus-monitor --wrap-around prev'
 alt-o = 'focus-monitor --wrap-around next'
 
 alt-p = 'workspace --wrap-around prev'
@@ -56,7 +56,7 @@ alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-alt-h = 'focus left'
+# alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'

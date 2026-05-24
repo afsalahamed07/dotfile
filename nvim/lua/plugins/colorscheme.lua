@@ -17,11 +17,32 @@ local function apply_hubbamax_highlights()
     vim.api.nvim_set_hl(0, "@punctuation.bracket.python", variable)
 end
 
+local function current_theme()
+    local path = vim.fn.expand("~/.config/theme/current")
+    local lines = vim.fn.filereadable(path) == 1 and vim.fn.readfile(path) or {}
+    local theme = lines[1] or "rose-pine"
+
+    if theme == "hubbamax" then
+        return "hubbamax"
+    end
+
+    return "rose-pine"
+end
+
 return {
     {
         "LazyVim/LazyVim",
         opts = {
-            colorscheme = "hubbamax",
+            colorscheme = current_theme(),
+        },
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine",
+        lazy = false,
+        priority = 1000,
+        opts = {
+            variant = "main",
         },
     },
     {
