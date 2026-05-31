@@ -22,6 +22,13 @@ return {
 
     {
         "MeanderingProgrammer/render-markdown.nvim",
-        enabled = false,
+        enabled = true,
+        opts = {
+            code = {
+                disable_background = true,
+                highlight_border = false,
+                highlight_inline = "Normal",
+            },
+        },
     },
 }
