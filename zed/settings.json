@@ -2,10 +2,21 @@
   // ============================================================
   //  APPEARANCE
   // ============================================================
+  "proxy": "",
+  "theme": {
+    "mode": "dark",
+    "light": "Hubbamax",
+    "dark": "Hubbamax",
+  },
   "icon_theme": {
     "mode": "light",
     "light": "Zed (Default)",
     "dark": "Zed (Default)",
+  },
+
+  // Transparent Background
+  "experimental.theme_overrides": {
+    "background.appearance": "blurred",
   },
 
   // ============================================================

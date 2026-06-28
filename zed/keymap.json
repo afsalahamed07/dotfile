@@ -7,16 +7,22 @@
     "bindings": {
       // LSP / code actions
       "space m": "editor::ToggleCodeActions",
+      "space c a": "editor::ToggleCodeActions",
       "space c f": "editor::Format",
       "space c r": "editor::Rename",
-      "space e e": "editor::GoToDiagnostic",
       "g d": "editor::GoToDefinition",
       "space v": "editor::GoToDefinitionSplit",
 
+      // diagnostics
+      "space x x": "diagnostics::Deploy",
+
       // navigation / pickers
       "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f r": "projects::OpenRecent",
+      "space f n": "workspace::NewFile",
       "space ,": "tab_switcher::Toggle",
-      "space s s":"outline::Toggle",
+      "space s s": "outline::Toggle",
       "g r": "editor::FindAllReferences",
 
       // motions
@@ -25,7 +31,12 @@
       "v v": "vim::ToggleVisualBlock",
 
       // window / panes / terminal
+      "space e": "project_panel::ToggleFocus",
+      "space E": "workspace::ToggleLeftDock",
       "space p a": "workspace::ToggleRightDock",
+      "space -": "pane::SplitDown",
+      "space |": "pane::SplitRight",
+      "space b d": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
       "space shift-q": "pane::CloseOtherItems",
       "space t": "workspace::NewTerminal",
@@ -34,8 +45,9 @@
       "g c c": "editor::ToggleComments",
 
       // git
-      "g b": "git::Blame"
-    }
+      "space g g": "git_panel::ToggleFocus",
+      "g b": "git::Blame",
+    },
   },
 
   // ============================================================
@@ -47,7 +59,7 @@
       // put key-bindings here if you want them to work only in normal mode
       // "down": ["workspace::SendKeystrokes", "4 j"]
       // "up": ["workspace::SendKeystrokes", "4 k"]
-    }
+    },
   },
 
   // ============================================================
@@ -58,8 +70,20 @@
     "bindings": {
       // visual, visual line & visual block modes
       "shift-k": "editor::MoveLineUp",
-      "shift-j": "editor::MoveLineDown"
-    }
+      "shift-j": "editor::MoveLineDown",
+    },
+  },
+
+  // ============================================================
+  //  PROJECT PANEL (file tree)
+  // ============================================================
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "space e": "project_panel::ToggleFocus", // toggle focus back to the editor
+      "space space": "file_finder::Toggle",
+      "space E": "workspace::ToggleLeftDock",
+    },
   },
 
   // ============================================================
@@ -69,8 +93,28 @@
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in insert mode
-      "j j": "vim::NormalBefore" // remap jj in insert mode to escape.
-    }
+      "j j": "vim::NormalBefore", // remap jj in insert mode to escape.
+    },
+  },
+
+  // ============================================================
+  //  COMPLETION MENU
+  // ============================================================
+  {
+    "context": "Editor && showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::ConfirmCompletion", // accept the selected completion
+    },
+  },
+
+  // ============================================================
+  //  EDIT PREDICTION (AI inline / ghost text)
+  // ============================================================
+  {
+    "context": "Editor && edit_prediction && !showing_completions",
+    "bindings": {
+      "ctrl-y": "editor::AcceptEditPrediction", // accept the inline AI suggestion
+    },
   },
 
   // ============================================================
@@ -80,8 +124,7 @@
     "bindings": {
       "ctrl-j": "menu::SelectNext",
       "ctrl-k": "menu::SelectPrevious",
-      "ctrl-y": "editor::SelectLine"
-    }
+    },
   },
 
   // ============================================================
@@ -91,7 +134,7 @@
     "context": "Editor",
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext",
-      "ctrl-k": "editor::ContextMenuPrevious"
-    }
-  }
+      "ctrl-k": "editor::ContextMenuPrevious",
+    },
+  },
 ]
