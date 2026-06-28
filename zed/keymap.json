@@ -23,6 +23,7 @@
       "space f n": "workspace::NewFile",
       "space ,": "tab_switcher::Toggle",
       "space s s": "outline::Toggle",
+      "space s g": "pane::DeploySearch",
       "g r": "editor::FindAllReferences",
 
       // motions
@@ -32,6 +33,7 @@
 
       // window / panes / terminal
       "space e": "project_panel::ToggleFocus",
+      "space g e": "git_panel::ToggleFocus",
       "space E": "workspace::ToggleLeftDock",
       "space p a": "workspace::ToggleRightDock",
       "space -": "pane::SplitDown",
@@ -84,6 +86,32 @@
       "space space": "file_finder::Toggle",
       "space E": "workspace::ToggleLeftDock",
     },
+  },
+
+  // ============================================================
+  //  GIT PANEL
+  // ============================================================
+  {
+    "context": "GitPanel && not_editing",
+    "bindings": {
+      "space g e": "git_panel::ActivateChangesTab", // toggle focus back to the editor
+      "space E": "workspace::ToggleLeftDock",
+    },
+  },
+
+  // ============================================================
+  //  TERMINAL (pane navigation — ctrl-w family)
+  // ============================================================
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-w w": "workspace::ActivateNextPane",
+      "ctrl-w p": "workspace::ActivatePreviousPane",
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w l": "workspace::ActivatePaneRight"
+    }
   },
 
   // ============================================================
