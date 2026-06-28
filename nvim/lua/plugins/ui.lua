@@ -41,6 +41,9 @@ return {
                 highlight_border = false,
                 highlight_inline = "Normal",
             },
+            bullet = {
+                right_pad = 1,
+            },
         },
     },
 }
