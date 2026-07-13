@@ -41,7 +41,7 @@
       "space b d": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
       "space shift-q": "pane::CloseOtherItems",
-      "space t": "workspace::NewTerminal",
+      "space t": "terminal_panel::ToggleFocus",
 
       // comments
       "g c c": "editor::ToggleComments",

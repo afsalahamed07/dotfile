@@ -31,7 +31,7 @@
   // ============================================================
   "ui_font_size": 16,
   "buffer_font_family": "Maple Mono NF",
-  "buffer_font_size": 17,
+  "buffer_font_size": 18,
   "buffer_line_height": {
     "custom": 1.7,
   },
@@ -68,6 +68,12 @@
     "dock": "right",
     "favorite_models": [],
     "model_parameters": [],
+  },
+  // Docked, not a center split — a center-pane terminal is a real pane, so
+  // project-panel file opens target it whenever it has focus.
+  "terminal": {
+    "dock": "right",
+    "default_width": 640,
   },
 
   // ============================================================
