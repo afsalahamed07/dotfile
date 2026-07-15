@@ -21,7 +21,7 @@
       "space f f": "file_finder::Toggle",
       "space f r": "projects::OpenRecent",
       "space f n": "workspace::NewFile",
-      "space ,": "tab_switcher::Toggle",
+      "space ,": "tab_switcher::ToggleAll",
       "space s s": "outline::Toggle",
       "space s g": "pane::DeploySearch",
       "g r": "editor::FindAllReferences",
@@ -112,7 +112,7 @@
       "space f f": "file_finder::Toggle",
       "space f r": "projects::OpenRecent",
       "space f n": "workspace::NewFile",
-      "space ,": "tab_switcher::Toggle",
+      "space ,": "tab_switcher::ToggleAll",
       "space s g": "pane::DeploySearch",
       "space x x": "diagnostics::Deploy",
 
