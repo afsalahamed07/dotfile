@@ -100,17 +100,47 @@
   },
 
   // ============================================================
-  //  TERMINAL (pane navigation — ctrl-w family)
+  //  NO-BUFFER / WORKSPACE (leader menu when no editor is focused)
   // ============================================================
   {
+    // Fires only when no editor is focused (empty pane, dashboard, panels).
+    // `!Editor` keeps these from hijacking the spacebar while typing in a buffer.
+    "context": "Workspace && !Editor && !menu && !Terminal",
+    "bindings": {
+      // finders / pickers
+      "space space": "file_finder::Toggle",
+      "space f f": "file_finder::Toggle",
+      "space f r": "projects::OpenRecent",
+      "space f n": "workspace::NewFile",
+      "space ,": "tab_switcher::Toggle",
+      "space s g": "pane::DeploySearch",
+      "space x x": "diagnostics::Deploy",
+
+      // panels / docks / terminal
+      "space e": "project_panel::ToggleFocus",
+      "space g e": "git_panel::ToggleFocus",
+      "space g g": "git_panel::ToggleFocus",
+      "space E": "workspace::ToggleLeftDock",
+      "space p a": "workspace::ToggleRightDock",
+      "space t": "terminal_panel::ToggleFocus",
+
+      // splits
+      "space -": "pane::SplitDown",
+      "space |": "pane::SplitRight",
+    },
+  },
+
+  // ============================================================
+  //  TERMINAL (ctrl-w → back to editor)
+  // ============================================================
+  {
+    // Terminal is a right dock (see settings.json), not a center pane, so
+    // pane-navigation actions don't reach it. ctrl-w bounces focus to the editor.
     "context": "Terminal",
     "bindings": {
-      "ctrl-w w": "workspace::ActivateNextPane",
-      "ctrl-w p": "workspace::ActivatePreviousPane",
-      "ctrl-w h": "workspace::ActivatePaneLeft",
-      "ctrl-w j": "workspace::ActivatePaneDown",
-      "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w l": "workspace::ActivatePaneRight"
+      "ctrl-w w": "terminal_panel::ToggleFocus",
+      "ctrl-w p": "terminal_panel::ToggleFocus",
+      "ctrl-w h": "terminal_panel::ToggleFocus",
     }
   },
 
