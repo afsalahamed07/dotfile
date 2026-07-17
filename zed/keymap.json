@@ -30,6 +30,7 @@
       "shift-l": "vim::EndOfLine",
       "shift-h": "vim::FirstNonWhitespace",
       "v v": "vim::ToggleVisualBlock",
+      "v i": "editor::SelectInsideDelimiters",
 
       // window / panes / terminal
       "space e": "project_panel::ToggleFocus",
@@ -42,6 +43,8 @@
       "space q": "pane::CloseActiveItem",
       "space shift-q": "pane::CloseOtherItems",
       "space t": "terminal_panel::ToggleFocus",
+      "space shift-l": "workspace::ActivatePaneRight",
+      "space shift-h": "workspace::ActivatePaneLeft",
 
       // comments
       "g c c": "editor::ToggleComments",
@@ -141,7 +144,7 @@
       "ctrl-w w": "terminal_panel::ToggleFocus",
       "ctrl-w p": "terminal_panel::ToggleFocus",
       "ctrl-w h": "terminal_panel::ToggleFocus",
-    }
+    },
   },
 
   // ============================================================
@@ -193,6 +196,18 @@
     "bindings": {
       "ctrl-j": "editor::ContextMenuNext",
       "ctrl-k": "editor::ContextMenuPrevious",
+    },
+  },
+
+
+  // ============================================================
+  //  MULTI BUFFERS
+  // ============================================================
+  {
+    "context": "Editor && multibuffer",
+    "bindings": {
+      "ctrl-j": "editor::MoveToStartOfNextExcerpt",
+      "ctrl-k": "editor::MoveToStartOfExcerpt",
     },
   },
 ]

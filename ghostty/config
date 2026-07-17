@@ -2,8 +2,8 @@
 font-family = "Maple Mono NF"
 # font-family = "space mono"
 font-thicken = true
-font-size = 20
-adjust-cell-height = 14
+font-size = 18
+adjust-cell-height = 17
 
 # -------- UI -------------
 # theme = GruvboxDark
@@ -15,7 +15,7 @@ cursor-style = block
 cursor-style-blink = true
 
 # transparency
-background-opacity = 0.98
+# background-opacity = 0.98
 
 
 window-decoration = false
