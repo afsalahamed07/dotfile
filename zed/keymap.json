@@ -12,6 +12,7 @@
       "space c r": "editor::Rename",
       "g d": "editor::GoToDefinition",
       "space v": "editor::GoToDefinitionSplit",
+      "space o i": "editor::OrganizeImports",
 
       // diagnostics
       "space x x": "diagnostics::Deploy",

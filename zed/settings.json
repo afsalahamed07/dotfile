@@ -16,9 +16,9 @@
     "dark": "Hubbamax",
   },
   "icon_theme": {
-    "mode": "light",
+    "mode": "dark",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)",
+    "dark": "Zed (Default)"
   },
 
   // Transparent Background
