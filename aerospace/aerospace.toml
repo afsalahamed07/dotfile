@@ -3,8 +3,8 @@ config-version = 2
 # You can use it to add commands that run after AeroSpace startup.
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
-  'exec-and-forget open -ga "kitty"',
-  'exec-and-forget open -ga "Brave Browser"',
+  'exec-and-forget open -ga "Zed"',
+  'exec-and-forget open -ga "Firefox"',
   'workspace 1',
 ]
 start-at-login = true
@@ -100,7 +100,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-f = 'fullscreen'
 alt-enter = 'exec-and-forget open -na "Kitty"'
-alt-b = 'exec-and-forget open -na "Brave Browser"'
+alt-b = 'exec-and-forget open -na "Firefox"'
 alt-s = 'exec-and-forget open -na "Slack"'
 alt-m = 'exec-and-forget open -na "Music"'
 
@@ -143,7 +143,7 @@ if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'com.brave.Browser'
+if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]

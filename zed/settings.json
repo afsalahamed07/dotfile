@@ -3,10 +3,10 @@
   //  APPEARANCE
   // ============================================================
   "prettier": {
-    "allowed": true
+    "allowed": true,
   },
   "which_key": {
-    "enabled": true
+    "enabled": true,
   },
   "cli_default_open_behavior": "existing_window",
   "proxy": "",
@@ -18,7 +18,7 @@
   "icon_theme": {
     "mode": "light",
     "light": "Zed (Default)",
-    "dark": "Zed (Default)"
+    "dark": "Zed (Default)",
   },
 
   // Transparent Background
@@ -30,7 +30,7 @@
   //  FONTS
   // ============================================================
   "ui_font_size": 16,
-  "buffer_font_family": "Maple Mono NF",
+  "buffer_font_family": "Fira Code",
   "buffer_font_size": 18,
   "buffer_line_height": {
     "custom": 1.7,
