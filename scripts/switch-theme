@@ -15,7 +15,6 @@ ROOT = Path(__file__).resolve().parents[1]
 @dataclass(frozen=True)
 class Theme:
     name: str
-    nvim: str
     kitty: str
     ghostty: str
     btop: str
@@ -28,18 +27,16 @@ class Theme:
 THEMES = {
     "hubbamax": Theme(
         name="hubbamax",
-        nvim="hubbamax",
         kitty="kitty/hubbamax.conf",
         ghostty="hubbamax.ghostty",
         btop="hubbamax",
         opencode="hubbamax",
-        zed_dark="Ayu Dark",
+        zed_dark="Hubbamax",
         tmux="tmux/themes/hubbamax.conf",
         gitui="gitui/themes/hubbamax.ron",
     ),
     "rose-pine": Theme(
         name="rose-pine",
-        nvim="rose-pine",
         kitty="kitty/rose-pine.conf",
         ghostty="Rose Pine",
         btop="rose-pine",
@@ -49,14 +46,6 @@ THEMES = {
         gitui="gitui/themes/rose-pine.ron",
     ),
 }
-
-ALIASES = {
-    "rosepine": "rose-pine",
-    "rospine": "rose-pine",
-    "rose": "rose-pine",
-    "hubb": "hubbamax",
-}
-
 
 def read_current() -> str | None:
     path = ROOT / "theme/current"
@@ -101,7 +90,7 @@ def apply_ghostty(theme: Theme) -> None:
 def apply_btop(theme: Theme) -> None:
     replace_text(
         ROOT / "btop/btop.conf",
-        r'^\s*color_theme\s*=\s*".*"\s*$',
+        r'^[ \t]*color_theme[ \t]*=[ \t]*".*"[ \t]*$',
         f'color_theme = "{theme.btop}"',
     )
 
@@ -153,7 +142,7 @@ def main(argv: list[str]) -> int:
         print(usage(), file=sys.stderr)
         return 2
 
-    command = ALIASES.get(argv[1], argv[1])
+    command = argv[1]
 
     if command == "list":
         for name in sorted(THEMES):
@@ -161,7 +150,14 @@ def main(argv: list[str]) -> int:
         return 0
 
     if command == "current":
-        print(read_current() or "unknown")
+        current = read_current()
+        if current is None:
+            print("No current theme is configured", file=sys.stderr)
+            return 1
+        if current not in THEMES:
+            print(f"Configured theme does not exist: {current}", file=sys.stderr)
+            return 1
+        print(current)
         return 0
 
     theme = THEMES.get(command)

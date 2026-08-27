@@ -1,42 +1,41 @@
-# Mac Tune-Up Kit
+# macOS Workflow Config
 
-This repo now includes a practical set of scripts and config upgrades for workflow, speed, and reliability.
+This repository keeps a small, reproducible macOS workflow inspired by Omarchy's keyboard-first approach. AeroSpace manages windows, Ghostty is the primary terminal, Kitty is the fallback terminal, tmux provides terminal workspaces, and Starship owns the prompt.
 
-## What changed
-
-- AeroSpace launches your core apps on login and adds quick-launch binds.
-- tmux gets faster interactions, pane navigation with Alt+h/j/k/l, and auto-restore via continuum.
-- New scripts automate macOS defaults, performance audits, bootstrap installs, backups, and config checks.
-
-## Keybinds added
+## Global shortcuts
 
 ### AeroSpace
 
-- `Alt+Enter` -> new Ghostty window
-- `Alt+b` -> new Brave Browser window
-- `Alt+s` -> new Slack window
-- `Alt+m` -> new Music window
+- `Cmd+Enter` opens Ghostty.
+- `Cmd+Shift+Enter` opens Kitty.
+- `Cmd+Alt+Enter` opens Ghostty and attaches to, or creates, the `Work` tmux session.
+- `Alt+h/j/k/l` changes window focus.
+- `Alt+Shift+h/j/k/l` moves the focused window.
+- `Alt+1..0` and `Alt+a` select workspaces.
+- `Alt+Shift+1..0` and `Alt+Shift+a` move the focused window to a workspace.
+- `Alt+p/n` selects the previous or next workspace.
+- `Alt+b` opens Firefox; `Alt+s` opens Slack.
 
 ### tmux
 
-- `Alt+h/j/k/l` -> move between panes
-- `prefix + |` -> split pane horizontally
-- `prefix + -` -> split pane vertically
-- `prefix + r` -> reload tmux config
+- `Ctrl+Space` is the tmux prefix.
+- `Alt+Enter` splits vertically; `Alt+Shift+Enter` splits horizontally.
+- `Alt+Escape` closes the active pane.
+- `Ctrl+Alt+Arrow` changes pane focus.
+- `Ctrl+Alt+Shift+Arrow` resizes the active pane.
+- `Alt+1..9` selects a tmux window.
+- `Alt+Left/Right` changes windows; `Alt+Up/Down` changes sessions.
 
-## Scripts
+## Themes
 
-- `./scripts/check-configs.sh` validates core configs and basic startup.
-- `./scripts/macos-defaults.sh` applies sensible Finder/Dock/input defaults.
-- `./scripts/perf-audit.sh` captures quick system and shell performance signals.
-- `./scripts/bootstrap.sh` installs core tools/apps on a fresh Mac.
-- `./scripts/backup-dotfiles.sh` archives key configs to `~/.config-backups`.
+Run `./scripts/switch-theme list` to list themes and `./scripts/switch-theme <name>` to apply one. Hubbamax and Rosé Pine are the maintained themes. The switcher keeps Ghostty, Kitty, tmux, Zed, btop, OpenCode, and gitui aligned.
 
-## Recommended order
+## Maintenance
 
-1. `./scripts/backup-dotfiles.sh`
-2. `./scripts/check-configs.sh`
-3. `./scripts/macos-defaults.sh`
-4. `./scripts/perf-audit.sh`
+1. Preview a selective backup with `./scripts/backup-dotfiles.sh --dry-run`.
+2. Create the backup with `./scripts/backup-dotfiles.sh`.
+3. Validate the managed configs with `./scripts/check-configs.sh`.
+4. Apply macOS defaults only when desired with `./scripts/macos-defaults.sh`.
+5. Inspect startup and system performance with `./scripts/perf-audit.sh`.
 
-Then restart tmux (`tmux kill-server`) and reload AeroSpace config.
+Backups are written to `~/.config-backups` with a manifest and SHA-256 checksum. Credentials, caches, logs, and unrelated application state are not included.

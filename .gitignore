@@ -14,7 +14,6 @@ wireshark
 ytmdl
 yabai-bak
 QtProject
-envman
 fontforge
 nvim.bak
 nvim2.bak
@@ -24,9 +23,11 @@ wezterm
 htop
 zed/.*
 .DS_Store
+__pycache__/
 zed/embeddings
 zed/prompts
 zed/keymap_backup.json
 zed/settings_backup.json
+zsh/secrets.zsh
 tmux/plugins
 nvim-backup-*
