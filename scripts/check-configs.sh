@@ -99,6 +99,31 @@ ok 'tmux has no legacy prefix fallback'
 zsh -n "$config_root/.zshrc"
 ok 'Zsh config parses'
 
+ctrl_r_binding="$(zsh -ic 'bindkey -M viins "^R"' 2>/dev/null)"
+[[ "$ctrl_r_binding" == '"^R" fzf-history-widget' ]] || \
+  die "Ctrl-R is not bound to fzf history in viins: $ctrl_r_binding"
+ok 'Ctrl-R opens fzf history in viins'
+
+autosuggest_strategy="$(zsh -ic 'print -r -- ${(j: :)ZSH_AUTOSUGGEST_STRATEGY}' 2>/dev/null)"
+[[ "$autosuggest_strategy" == 'history completion' ]] || \
+  die "Zsh autosuggestion strategy is incomplete: $autosuggest_strategy"
+ok 'Zsh autosuggestions fall back from history to completion'
+
+docker_completion="$(zsh -ic 'print -r -- ${_comps[docker]-missing}' 2>/dev/null)"
+[[ "$docker_completion" == '_docker' ]] || \
+  die "Docker completion is not registered: $docker_completion"
+ok 'Docker completion is registered'
+
+docker_completion_file="$(zsh -ic 'completion_files=($^fpath/_docker(N)); print -r -- $completion_files[1]' 2>/dev/null)"
+[[ "$docker_completion_file" == '/opt/homebrew/share/zsh/site-functions/_docker' ]] || \
+  die "Docker completion does not resolve to Homebrew: $docker_completion_file"
+ok 'Docker completion resolves to Homebrew'
+
+docker_autosuggestion="$(zsh -ic '_zsh_autosuggest_strategy_completion "docker syst"; print -r -- "$suggestion"' 2>/dev/null)"
+[[ "$docker_autosuggestion" == 'docker system' ]] || \
+  die "Docker autosuggestion did not complete a subcommand: $docker_autosuggestion"
+ok 'Docker subcommands produce completion-based autosuggestions'
+
 STARSHIP_CONFIG="$config_root/starship.toml" starship explain >/dev/null
 ok 'Starship config validates'
 

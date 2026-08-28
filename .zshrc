@@ -50,7 +50,6 @@ bindkey -v
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey '^[w' kill-region
-bindkey '^R' history-incremental-search-backward
 bindkey '^A' beginning-of-line
 bindkey '^E' end-of-line
 bindkey '^K' kill-line
@@ -59,7 +58,6 @@ bindkey '^U' backward-kill-line
 HISTSIZE=5000
 HISTFILE="$HOME/.zsh_history"
 SAVEHIST=$HISTSIZE
-HISTDUP=erase
 setopt appendhistory
 setopt sharehistory
 setopt hist_ignore_space
@@ -109,6 +107,7 @@ export GOBIN="$GOPATH/bin"
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$BUN_INSTALL/bin:$HOME/.opencode/bin:$HOME/.local/bin:/usr/local/go/bin:$GOBIN:$PNPM_HOME/bin:$PATH"
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 

@@ -2,7 +2,10 @@
   // ============================================================
   //  APPEARANCE
   // ============================================================
-  "ui_font_family": "Fira Code",
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "ui_font_family": "Maple Mono NF",
   "prettier": {
     "allowed": true,
   },
@@ -31,7 +34,7 @@
   //  FONTS
   // ============================================================
   "ui_font_size": 16,
-  "buffer_font_family": "Fira Code",
+  "buffer_font_family": "Maple Mono NF",
   "buffer_font_size": 18,
   "buffer_line_height": {
     "custom": 1.7,
@@ -71,12 +74,6 @@
     "favorite_models": [],
     "model_parameters": [],
   },
-  // Docked, not a center split — a center-pane terminal is a real pane, so
-  // project-panel file opens target it whenever it has focus.
-  "terminal": {
-    "dock": "right",
-    "default_width": 640,
-  },
 
   // ============================================================
   //  LANGUAGES
@@ -84,6 +81,11 @@
   "languages": {
     "HTML": {
       "show_edit_predictions": true,
+    },
+    "Go": {
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "language_servers": ["gopls"],
     },
   },
 
@@ -96,4 +98,15 @@
       "projects": [],
     },
   ],
+
+  // ============================================================
+  //  Terminal
+  // ============================================================
+  // Docked, not a center split — a center-pane terminal is a real pane, so
+  // project-panel file opens target it whenever it has focus.
+  "terminal": {
+    "dock": "right",
+    "default_width": 640,
+    "font_family": "Maple Mono NF",
+  },
 }

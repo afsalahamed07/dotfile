@@ -31,3 +31,4 @@ zed/settings_backup.json
 zsh/secrets.zsh
 tmux/plugins
 nvim-backup-*
+.omx

@@ -189,7 +189,7 @@
     // you press y instead of tab.
     "context": "Editor && edit_prediction",
     "bindings": {
-      "alt-y": "editor::AcceptEditPrediction",
+      "ctrl-y": "editor::AcceptEditPrediction",
     },
   },
 
