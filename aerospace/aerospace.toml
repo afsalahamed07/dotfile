@@ -3,6 +3,7 @@ config-version = 2
 after-startup-command = [
   'exec-and-forget open -ga "Zed"',
   'exec-and-forget open -ga "Firefox"',
+  'exec-and-forget open -ga "BetterDisplay"',
   'workspace 1',
 ]
 start-at-login = true
@@ -125,6 +126,10 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.usebruno.app'
+run = 'move-node-to-workspace 6'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'

@@ -3,6 +3,7 @@
   //  APPEARANCE
   // ============================================================
   "edit_predictions": {
+    "allow_data_collection": "yes",
     "provider": "zed"
   },
   "ui_font_family": "Maple Mono NF",
