@@ -23,6 +23,8 @@
       "space f r": "projects::OpenRecent",
       "space f n": "workspace::NewFile",
       "space ,": "tab_switcher::ToggleAll",
+      "ctrl-w space": "file_finder::Toggle",
+      "ctrl-w ,": "tab_switcher::ToggleAll",
       "space s s": "outline::Toggle",
       "space s g": "pane::DeploySearch",
       "g r": "editor::FindAllReferences",
@@ -40,10 +42,11 @@
       "space p a": "workspace::ToggleRightDock",
       "space -": "pane::SplitDown",
       "space |": "pane::SplitRight",
+      "ctrl-w w": "workspace::ActivateNextPane",
       "space b d": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
       "space shift-q": "pane::CloseOtherItems",
-      "space t": "terminal_panel::ToggleFocus",
+      "space t": "workspace::NewCenterTerminal",
       "space shift-l": "workspace::ActivatePaneRight",
       "space shift-h": "workspace::ActivatePaneLeft",
 
@@ -126,7 +129,7 @@
       "space g g": "git_panel::ToggleFocus",
       "space E": "workspace::ToggleLeftDock",
       "space p a": "workspace::ToggleRightDock",
-      "space t": "terminal_panel::ToggleFocus",
+      "space t": "workspace::NewCenterTerminal",
 
       // splits
       "space -": "pane::SplitDown",
@@ -135,16 +138,36 @@
   },
 
   // ============================================================
-  //  TERMINAL (ctrl-w → back to editor)
+  //  TERMINAL (center-pane navigation + tab movement)
   // ============================================================
   {
-    // Terminal is a right dock (see settings.json), not a center pane, so
-    // pane-navigation actions don't reach it. ctrl-w bounces focus to the editor.
+    // Center terminals participate in the same pane navigation as editor tabs.
     "context": "Terminal",
     "bindings": {
-      "ctrl-w w": "terminal_panel::ToggleFocus",
-      "ctrl-w p": "terminal_panel::ToggleFocus",
-      "ctrl-w h": "terminal_panel::ToggleFocus",
+      "ctrl-w space": "file_finder::Toggle",
+      "ctrl-w ,": "tab_switcher::ToggleAll",
+      "ctrl-w w": "workspace::ActivateNextPane",
+      "ctrl-w p": "workspace::ActivatePreviousPane",
+      "ctrl-w h": "workspace::ActivatePaneLeft",
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-w k": "workspace::ActivatePaneUp",
+      "ctrl-w l": "workspace::ActivatePaneRight",
+      "ctrl-w shift-h": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "left" },
+      ],
+      "ctrl-w shift-j": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "down" },
+      ],
+      "ctrl-w shift-k": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "up" },
+      ],
+      "ctrl-w shift-l": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "right" },
+      ],
     },
   },
 

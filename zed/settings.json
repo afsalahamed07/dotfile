@@ -4,7 +4,7 @@
   // ============================================================
   "edit_predictions": {
     "allow_data_collection": "yes",
-    "provider": "zed"
+    "provider": "zed",
   },
   "ui_font_family": "Maple Mono NF",
   "prettier": {
@@ -103,11 +103,8 @@
   // ============================================================
   //  Terminal
   // ============================================================
-  // Docked, not a center split — a center-pane terminal is a real pane, so
-  // project-panel file opens target it whenever it has focus.
+  // Terminals open in center panes via `workspace::NewCenterTerminal`.
   "terminal": {
-    "dock": "right",
-    "default_width": 640,
     "font_family": "Maple Mono NF",
   },
 }
