@@ -45,6 +45,22 @@
       "space -": "pane::SplitDown",
       "space |": "pane::SplitRight",
       "ctrl-w w": "workspace::ActivateNextPane",
+      "ctrl-w shift-h": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "left" },
+      ],
+      "ctrl-w shift-j": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "down" },
+      ],
+      "ctrl-w shift-k": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "up" },
+      ],
+      "ctrl-w shift-l": [
+        "workspace::MoveItemToPaneInDirection",
+        { "direction": "right" },
+      ],
       "space b d": "pane::CloseActiveItem",
       "space q": "pane::CloseActiveItem",
       "space shift-q": "pane::CloseOtherItems",
