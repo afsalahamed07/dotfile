@@ -25,6 +25,8 @@
       "space ,": "tab_switcher::ToggleAll",
       "ctrl-w space": "file_finder::Toggle",
       "ctrl-w ,": "tab_switcher::ToggleAll",
+      "ctrl-[": "pane::ActivatePreviousItem",
+      "ctrl-]": "pane::ActivateNextItem",
       "space s s": "outline::Toggle",
       "space s g": "pane::DeploySearch",
       "g r": "editor::FindAllReferences",
@@ -134,6 +136,17 @@
       // splits
       "space -": "pane::SplitDown",
       "space |": "pane::SplitRight",
+    },
+  },
+
+  // ============================================================
+  //  PANE TABS (editors + center terminals)
+  // ============================================================
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-[": "pane::ActivatePreviousItem",
+      "ctrl-]": "pane::ActivateNextItem",
     },
   },
 
