@@ -18,3 +18,7 @@ macos-option-as-alt = true
 
 keybind = alt+enter=text:\x1b[13;3u
 keybind = alt+shift+enter=text:\x1b[13;4u
+
+
+background-opacity = 0.8
+background-blur = 20

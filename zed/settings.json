@@ -3,6 +3,7 @@
   //  APPEARANCE
   // ============================================================
   "edit_predictions": {
+    "mode": "eager",
     "allow_data_collection": "yes",
     "provider": "zed",
   },
@@ -24,11 +25,6 @@
     "mode": "light",
     "light": "Zed (Default)",
     "dark": "Zed (Default)",
-  },
-
-  // Transparent Background
-  "experimental.theme_overrides": {
-    "background.appearance": "blurred",
   },
 
   // ============================================================
